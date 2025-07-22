@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="header">
+        <a class="logo" href="index.html">Blanka</a>
+        <a class="cart-icon" id="cart-icon-btn" href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count-badge">0</span>
+        </a>
+    </div>
+    <!-- popup message -->
+    <div id="cart-alert" class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      Item added to cart!
+    </div>
+    <div class="container">
+      <h1>Shopping Cart</h1>
+      <div class="cart-items">
+        <div class="cart-item">
+          <div class="cart-image">
+            <img src="./cart-images/makup-image.jpg" height="100%" alt="Item 1" />
+          </div>
+          <div class="cart-details">
+            <p class="heaing">On Blanka’s site, our beautyproduct description shows hierarchy, bullet points, and white space.</p>
+            <p class="price">Price: $10</p> 
+             <button class="add-to-cart-btn" 
+              data-id="1" 
+              data-price="10" 
+              data-image="./cart-images/makup-image.jpg">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="cart-image">
+            <img src="./cart-images/perfume-image.jpg" height="100%" alt="Item 2" />
+          </div>
+          <div class="cart-details">
+            <p class="heaing">On Blanka’s site, our beautyproduct description shows hierarchy, bullet points, and white space.</p>
+            <p class="price">Price: $15</p>
+            <button class="add-to-cart-btn" 
+              data-id="2" 
+              data-name="Perfume" 
+              data-price="15" 
+              data-image="./cart-images/perfume-image.jpg">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+                <div class="cart-item">
+          <div class="cart-image">
+            <img src="./cart-images/bag-image.jpeg" height="100%" alt="Item 1" />
+          </div>
+          <div class="cart-details">
+            <p class="heaing">On Blanka’s site, our beautyproduct description shows hierarchy, bullet points, and white space.</p>
+            <p class="price">Price: $10</p>
+            <button class="add-to-cart-btn" 
+              data-id="3" 
+              data-name="bag" 
+              data-price="10" 
+              data-image="./cart-images/bag-image.jpeg">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="cart-image">
+            <img src="./cart-images/camera-image.jpg" height="100%" alt="Item 2" />
+          </div>
+          <div class="cart-details">
+            <p class="heaing">On Blanka’s site, our beautyproduct description shows hierarchy, bullet points, and white space.</p>
+            <p class="price">Price: $15</p>
+            <button class="add-to-cart-btn" 
+              data-id="4" 
+              data-name="camera" 
+              data-price="15" 
+              data-image="./cart-images/camera-image.jpg">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+                <div class="cart-item">
+          <div class="cart-image">
+            <img src="./cart-images/clock-image.jpeg" height="100%" alt="Item 1" />
+          </div>
+          <div class="cart-details">
+            <p class="heaing">On Blanka’s site, our beautyproduct description shows hierarchy, bullet points, and white space.</p>
+            <p class="price">Price: $10</p>
+            <button class="add-to-cart-btn" 
+              data-id="5" 
+              data-name="clock" 
+              data-price="10" 
+              data-image="./cart-images/clock-image.jpeg">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="cart-image">
+            <img src="./cart-images/headphone-image.jpeg" height="100%" alt="Item 2" />
+          </div>
+          <div class="cart-details">
+            <p class="heaing">On Blanka’s site, our beautyproduct description shows hierarchy, bullet points, and white space.</p>
+            <p class="price">Price: $15</p>
+            <button class="add-to-cart-btn" 
+              data-id="6" 
+              data-name="headphone" 
+              data-price="15" 
+              data-image="./cart-images/headphone-image.jpeg">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+              </div>
+
+      </div>
+      <!-- // popup message -->
+      
+
+      <!-- Cart Sidebar/Modal -->
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-sidebar-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart-btn" class="close-cart-btn">&times;</button>
+      </div>
+      <div id="cart-sidebar-items" class="cart-sidebar-items"></div>
+      <div class="cart-sidebar-footer">
+        <span>Total: $<span id="cart-sidebar-total">0</span></span>
+      </div>
+    </div>
+    <div id="cart-sidebar-overlay" class="cart-sidebar-overlay"></div>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        window.shoppingCart = new ShoppingCart();
+      });
+    </script>
+    </div>
+  </body>
+</html>
