@@ -131,27 +131,7 @@ h1{
     text-align: center;
     
 }
-#cart-list {
-    margin-bottom: 1rem;
-    
-}
-.cart-summary-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-}
-.cart-summary-item .qty {
-    margin: 0 0.5rem;
-    color: #333;
-}
-.cart-total {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #222;
-    text-align: right;
-    margin-top: 1rem;
-}
+
 .cart-sidebar {
   position: fixed;
   top: 0;
@@ -182,34 +162,73 @@ h1{
   cursor: pointer;
 }
 .cart-sidebar-items {
-  flex: 1;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column; /* <-- Make items stack vertically */
   padding: 1em;
+  align-items: stretch;   /* <-- Stretch items to full width */
+  gap: 1em;               /* <-- Add space between items */
 }
+/* Add style for each cart-sidebar-item */
 .cart-sidebar-item {
   display: flex;
   align-items: center;
-  margin-bottom: 1em;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eee;
+  gap: 1em;
 }
-.cart-sidebar-item img {
+
+.cart-item-row img {
   width: 50px;
   height: 50px;
   object-fit: cover;
   margin-right: 1em;
 }
+.cart-item-row{
+  display: flex;
+  justify-content: space-around;
+}
+.cart-item-row button{
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 40px;
+  margin-inline-start: 20px;
+  height: 30px;
+}
+.cart-item-row .remove-btn {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  font-size: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 60px;
+}
 .cart-sidebar-item-details {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
+
 .cart-sidebar-item-controls {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 8px;
 }
+
 .cart-sidebar-footer {
   padding: 1em;
   border-top: 1px solid #eee;
   font-weight: bold;
   text-align: right;
+  margin-bottom: 0;
+  align-items: flex-end;
 }
 .cart-sidebar-overlay {
   display: none;
@@ -265,6 +284,11 @@ h1{
   font-size: 1rem;
 }
 
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+  
+}
 /* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
