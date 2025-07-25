@@ -2,12 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-      overflow-x: hidden;
+}
+body{ 
+  overflow-x: hidden;
+  width: 100%;
 }
 .container{
     width: 100%;
     height: 100%;
     background-color: #f0f0f0;
+    overflow-x: hidden;
   
 }
 h1{
@@ -148,6 +152,10 @@ h1{
 .cart-sidebar.open {
   right: 0;
 }
+.cart-alert.open {
+  right: 5px;
+  z-index: 1111;
+}
 .cart-sidebar-header {
   display: flex;
   justify-content: space-between;
@@ -255,22 +263,19 @@ h1{
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 30px;
-}
-.cart-sidebar.open ~ .cart-sidebar-overlay,
-.cart-sidebar-overlay.open {
-  display: block;
+
  }
-.alert {
+.cart-alert {
+  transition: 0.5s;
   padding: 20px;
   background-color: #5ab543; /* Red */
   color: white;
-  margin-bottom: 15px;
-  position: absolute;
-  right: 0;
-  margin-right: 18px;
-  display: none;
+  position: fixed;
+   top: 0;
+  right: -400px;
   border-radius: 5px;
-  direction: rtl;  
+  direction: rtl; 
+ 
 }
 
 /* The close button */

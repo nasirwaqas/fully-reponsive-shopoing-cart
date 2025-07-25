@@ -9,19 +9,20 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js"></script>
+
 </head>
 
 <body>
   <div class="header">
-    <a class="logo" href="index.html">Blanka</a>
+    <a class="logo" href="index.html">Logo</a>
     <a class="cart-icon" id="cart-icon-btn" href="#">
       <i class="fa fa-shopping-cart"></i>
       <span id="cart-count-badge">0</span>
     </a>
   </div>
   <!-- popup message -->
-  <div id="cart-alert" class="alert">
-    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <div id="cart-alert" class="cart-alert">
+    <span id="closeBtn" class="closebtn">&times;</span>
     Item added to cart!
   </div>
   <div class="container">
@@ -36,7 +37,7 @@
             On Blanka’s site, our beautyproduct description shows hierarchy,
             bullet points, and white space.
           </p>
-          <p class="price">Price: $10</p>
+          <p class="price">Price: 10</p>
           <button class="add-to-cart-btn" data-id="1" data-price="10" data-image="./cart-images/makup-image.jpg">
             Add to Cart
           </button>
@@ -51,7 +52,7 @@
             On Blanka’s site, our beautyproduct description shows hierarchy,
             bullet points, and white space.
           </p>
-          <p class="price">Price: $15</p>
+          <p class="price">Price: 15</p>
           <button class="add-to-cart-btn" data-id="2" data-name="Perfume" data-price="15"
             data-image="./cart-images/perfume-image.jpg">
             Add to Cart
@@ -67,7 +68,7 @@
             On Blanka’s site, our beautyproduct description shows hierarchy,
             bullet points, and white space.
           </p>
-          <p class="price">Price: $10</p>
+          <p class="price">Price: 10</p>
           <button class="add-to-cart-btn" data-id="3" data-name="bag" data-price="10"
             data-image="./cart-images/bag-image.jpeg">
             Add to Cart
@@ -83,7 +84,7 @@
             On Blanka’s site, our beautyproduct description shows hierarchy,
             bullet points, and white space.
           </p>
-          <p class="price">Price: $15</p>
+          <p class="price">Price: 15</p>
           <button class="add-to-cart-btn" data-id="4" data-name="camera" data-price="15"
             data-image="./cart-images/camera-image.jpg">
             Add to Cart
@@ -99,7 +100,7 @@
             On Blanka’s site, our beautyproduct description shows hierarchy,
             bullet points, and white space.
           </p>
-          <p class="price">Price: $10</p>
+          <p class="price">Price: 10</p>
           <button class="add-to-cart-btn" data-id="5" data-name="clock" data-price="10"
             data-image="./cart-images/clock-image.jpeg">
             Add to Cart
@@ -115,7 +116,7 @@
             On Blanka’s site, our beautyproduct description shows hierarchy,
             bullet points, and white space.
           </p>
-          <p class="price">Price: $15</p>
+          <p class="price">Price: 15</p>
           <button class="add-to-cart-btn" data-id="6" data-name="headphone" data-price="15"
             data-image="./cart-images/headphone-image.jpeg">
             Add to Cart
@@ -136,11 +137,10 @@
       <!-- Cart items will be rendered here by JS from localStorage -->
     </div>
     <div class="cart-sidebar-footer">
-      <span>Total: $<span id="cart-sidebar-total">0</span></span>
+      <span>Total: <span id="cart-sidebar-total">0</span></span>
     </div>
   </div>
   <div id="cart-sidebar-overlay" class="cart-sidebar-overlay"></div>
-  <script src="script.js"></script>
   </div>
 </body>
 
